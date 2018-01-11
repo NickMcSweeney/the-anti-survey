@@ -1,0 +1,22 @@
+{
+  "name": "un-survey",
+  "version": "1.0.0",
+  "description": "A person friendly survey",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickMcSweeney/the-anti-survey.git"
+  },
+  "author": "Nicholas Shindler",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/NickMcSweeney/the-anti-survey/issues"
+  },
+  "homepage": "https://github.com/NickMcSweeney/the-anti-survey#readme",
+  "dependencies": {
+    "vue": "^2.5.13"
+  }
+}
