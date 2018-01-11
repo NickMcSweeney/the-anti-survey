@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   color: #FFF;
+  font-family: Arial;
 }
 .form-body {
   display: flex;
@@ -15,15 +16,47 @@ body {
 .form-body > div {
   padding: 3rem;
   display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
+
 .header-bar {
   background-color: rgb(57, 62, 66);
   flex: .2;
 }
+.header-bar label {
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 1rem;
+  height: auto;
+  vertical-align: middle;
+}
+.header-bar label h2 {
+  text-align: center;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  width: auto;
+}
+.header-bar label h2 > input {
+  background-color: transparent;
+  font-size: 1.6rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 3px solid #FFF;
+  color: #FFF;
+  width: auto;
+  padding: 0 .2rem
+}
+
 .main-body-bar {
   background-color: rgb(32, 160, 214);
   flex: .7;
 }
+
 .bottom-bar {
   background-color: rgb(57, 62, 66);
   flex: .1;
@@ -35,7 +68,15 @@ body {
   outline: 0;
   border: 0;
   color: rgb(32, 160, 214);
-  margin: 0 auto;
+  background-color: rgb(228, 233, 237);
   cursor: pointer;
   font-weight: bold;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #d8dfe4;
+}
+button:active {
+  background-color: #FFF;
+  border: 2px solid #d8dfe4;
 }
