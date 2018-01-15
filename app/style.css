@@ -3,7 +3,7 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-family: Arial;
 }
 .form-body {
@@ -24,7 +24,7 @@ body {
 
 .header-bar {
   background-color: rgb(57, 62, 66);
-  flex: .2;
+  flex: 0.2;
 }
 .header-bar label {
   text-align: center;
@@ -46,20 +46,74 @@ body {
   font-size: 1.6rem;
   border: 0;
   outline: 0;
-  border-bottom: 3px solid #FFF;
-  color: #FFF;
+  border-bottom: 3px solid #fff;
+  color: #fff;
   width: auto;
-  padding: 0 .2rem
+  padding: 0 0.2rem;
 }
 
 .main-body-bar {
   background-color: rgb(32, 160, 214);
-  flex: .7;
+  flex: 0.7;
+}
+.main-body-bar .survey-tree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  padding-right: 300px;
+}
+.main-body-bar .survey-tree .option-list {
+  margin: 0 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.main-body-bar .survey-tree .option-block {
+  position: absolute;
+  width: 300px;
+  z-index: 10;
+}
+.option-block > div {
+  z-index: 20;
+}
+.option-list .unselected-inputs {
+  z-index: 10;
+  opacity: 0.7;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.36s ease;
+}
+.option-list .disabled-input {
+  opacity: 0.7;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.36s ease;
+}
+.option-list .selected-input {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  transition: all 0.36s ease;
+}
+.option-list .selected-input .center-selection {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.option-list .hidden-input {
+  opacity: 0;
 }
 
 .bottom-bar {
   background-color: rgb(57, 62, 66);
-  flex: .1;
+  flex: 0.1;
 }
 .bottom-bar > button {
   height: 36px;
@@ -77,6 +131,14 @@ button:hover {
   background-color: #d8dfe4;
 }
 button:active {
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px solid #d8dfe4;
+}
+
+/* transitions */
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 2.5s;
+}
+.slide-fade-enter, .slide-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  /* opacity: 0; */
 }
