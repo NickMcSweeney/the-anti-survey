@@ -1,3 +1,4 @@
+const config = UnSurvey.config
 const app = {
   template: `
     <div class="form-body">
@@ -9,8 +10,8 @@ const app = {
       </div>
       <div class="main-body-bar">
         <div class="survey-tree">
-          {{ fakeJson.start }}
-          <survey-selection :dataObj="fakeJson.inputs"></survey-selection>
+          {{ surveyData.start }}
+          <survey-selection :dataObj="surveyData.inputs"></survey-selection>
         </div>
       </div>
       <div class="bottom-bar">
@@ -22,80 +23,7 @@ const app = {
   data() {
     return {
       name: "",
-      fakeJson: {
-        start: "I like to",
-        inputs: {
-          volunteer: {
-            label: "volunteer",
-            next: "by",
-            inputs: {
-              elderly: {
-                label: "helping the elderly",
-              },
-              kitchens: {
-                label: "going to soup kitchens",
-              },
-              running: {
-                label: "running charity races",
-              },
-              other: {
-                label: "giving my time in other ways",
-              },
-            },
-          },
-          donate: {
-            label: "donate",
-            next: "by giving",
-            inputs: {
-              books: {
-                label: "books",
-                next: "to",
-                inputs: {
-                  children: {
-                    label: "homless children",
-                  },
-                  people: {
-                    label: "blind people",
-                  },
-                  dogs: {
-                    label: "rescue dogs",
-                  },
-                },
-              },
-              food: {
-                label: "food",
-                next: "to",
-                inputs: {
-                  children: {
-                    label: "homless children",
-                  },
-                  people: {
-                    label: "blind people",
-                  },
-                  dogs: {
-                    label: "rescue dogs",
-                  },
-                },
-              },
-              money: {
-                label: "money",
-                next: "to",
-                inputs: {
-                  children: {
-                    label: "homless children",
-                  },
-                  people: {
-                    label: "blind people",
-                  },
-                  dogs: {
-                    label: "rescue dogs",
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
+      surveyData: config,
     };
   },
   computed: {
